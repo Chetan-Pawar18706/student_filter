@@ -2,13 +2,16 @@ import mongoose from "mongoose";
 
 const connectDatabase = async () => {
   try {
-    const uri = process.env.MONGO_URI;
+    const uri = process.env.MONGODB_URI;
 
     if (!uri) {
-      throw new Error("MONGO_URI is not defined in environment variables. Please set it to your MongoDB Atlas connection string.");
+      throw new Error("MONGODB_URI is not defined");
     }
 
-    await mongoose.connect(uri);
+    await mongoose.connect(uri, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
 
     console.log("✅ MongoDB connected");
   } catch (error) {
