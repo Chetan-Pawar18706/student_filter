@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 import { tap } from 'rxjs';
 import { AuthResponse, User } from '../models/auth.model';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://student-filter.onrender.com/api';
 const TOKEN_KEY = 'quizforge_token';
 const USER_KEY = 'quizforge_user';
 

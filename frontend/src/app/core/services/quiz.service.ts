@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable, inject } from '@angular/core';
 import { AttemptHistory, Quiz } from '../models/quiz.model';
 
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://student-filter.onrender.com/api';
 
 @Injectable({ providedIn: 'root' })
 export class QuizService {
