@@ -1,5 +1,5 @@
 import { app } from './app.js';
-import { connectDatabase } from './config/db.js';
+import connectDatabase from './config/db.js';
 import { User } from './models/User.js';
 
 const port = Number(process.env.PORT) || 5000;
